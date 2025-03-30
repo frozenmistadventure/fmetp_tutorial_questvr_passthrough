@@ -1,5 +1,7 @@
 # fmetp_tutorial_questvr_passthrough
 This example project demonstrates the low latency passthrough live stream to any platforms, via **FMETP STREAM 6**.
+- Youtube Tutorial:
+https://youtu.be/vJNRrGsxT-k
 
 - Tested with Unity 2022.3.58f1 and 6000.0.39f1
 - Asset Store link: https://assetstore.unity.com/packages/slug/307623
