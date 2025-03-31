@@ -601,7 +601,7 @@ RectTransform:
   m_GameObject: {fileID: 1449027352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 3.5555556, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1653582041}
@@ -609,7 +609,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1280, y: 680}
+  m_SizeDelta: {x: 1280, y: 960}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1449027354
 MonoBehaviour:
@@ -676,10 +676,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmnetwork: {fileID: 334881048}
-  ScaleX: 0.5
-  ScaleY: 0.45
-  OffsetX: 0
-  OffsetY: -0.016
+  ViewScaleX: 0.5
+  ViewScaleY: 0.5
+  ViewOffsetX: 0
+  ViewOffsetY: 0
+  MRScaleX: 1
+  MRScaleY: 1
+  MROffsetX: 0
+  MROffsetY: 0
   RemoteSyncData: 1
   syncFPS: 8
 --- !u!4 &1454070194

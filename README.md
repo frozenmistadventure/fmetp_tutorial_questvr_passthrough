@@ -9,7 +9,7 @@ https://youtu.be/vJNRrGsxT-k
 
 # Live Stream Meta Quest Mixed Reality to any devices
 For quick testing:
-- Download this template and import FMETP STREAM 6
+- Download this template and import FMETP STREAM 6(v6.038 or above)
 - Build & Deploy the scene "QuestVR_PassthroughCameraStreamer(UDP)" to Quest3/3S
 - The viewer scene is "QuestVR_PassthroughCameraReceiver(UDP)"
 

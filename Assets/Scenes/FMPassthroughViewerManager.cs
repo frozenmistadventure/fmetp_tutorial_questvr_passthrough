@@ -38,9 +38,14 @@ public class FMPassthroughCamera : MonoBehaviour
     private void FMPassthroughViewerCalibration(string inputString)
     {
         string[] _data = inputString.Split(",");
-        if (float.TryParse(_data[1], out float _scaleX)) gameViewEncoder.MixedRealityScaleX = _scaleX;
-        if (float.TryParse(_data[2], out float _scaleY)) gameViewEncoder.MixedRealityScaleY = _scaleY;
-        if (float.TryParse(_data[3], out float _offsetX)) gameViewEncoder.MixedRealityOffsetX = _offsetX;
-        if (float.TryParse(_data[4], out float _offsetY)) gameViewEncoder.MixedRealityOffsetY = _offsetY;
+        if (float.TryParse(_data[1], out float _vscaleX)) gameViewEncoder.ViewScaleX = _vscaleX;
+        if (float.TryParse(_data[2], out float _vscaleY)) gameViewEncoder.ViewScaleY = _vscaleY;
+        if (float.TryParse(_data[3], out float _voffsetX)) gameViewEncoder.ViewOffsetX = _voffsetX;
+        if (float.TryParse(_data[4], out float _voffsetY)) gameViewEncoder.ViewOffsetY = _voffsetY;
+
+        if (float.TryParse(_data[5], out float _mscaleX)) gameViewEncoder.MixedRealityScaleX = _mscaleX;
+        if (float.TryParse(_data[6], out float _mscaleY)) gameViewEncoder.MixedRealityScaleY = _mscaleY;
+        if (float.TryParse(_data[7], out float _moffsetX)) gameViewEncoder.MixedRealityOffsetX = _moffsetX;
+        if (float.TryParse(_data[8], out float _moffsetY)) gameViewEncoder.MixedRealityOffsetY = _moffsetY;
     }
 }
