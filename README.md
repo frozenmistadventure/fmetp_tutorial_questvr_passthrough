@@ -1,3 +1,7 @@
+# other examples
+- remote desktop example >>
+https://github.com/frozenmistadventure/fmetp_tutorial_questvr_stream
+
 # fmetp_tutorial_questvr_passthrough
 This example project demonstrates the low latency passthrough live stream to any platforms, via **FMETP STREAM 6**.
 - Youtube Tutorial:
