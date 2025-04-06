@@ -414,6 +414,7 @@ MonoBehaviour:
   OnWebCamTextureReadyEvent:
     m_PersistentCalls:
       m_Calls: []
+  fmnetwork: {fileID: 1460407259}
 --- !u!4 &332630122
 Transform:
   m_ObjectHideFlags: 0
@@ -1891,6 +1892,13 @@ MonoBehaviour:
   MixedRealityScaleY: 1
   MixedRealityOffsetX: 0
   MixedRealityOffsetY: 0
+  ShowAdvancedViewSettings: 1
+  ViewFlipX: 0
+  ViewFlipY: 0
+  ViewScaleX: 0.5
+  ViewScaleY: 0.5
+  ViewOffsetX: 0
+  ViewOffsetY: 0
   CubemapResolution: 1024
   FMDesktopShowAdvancedOptions: 0
   FMDesktopRotation: 0

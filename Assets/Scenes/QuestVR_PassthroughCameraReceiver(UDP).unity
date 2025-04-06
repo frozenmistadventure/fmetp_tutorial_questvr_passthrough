@@ -676,10 +676,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmnetwork: {fileID: 334881048}
+  webcamFOV_h: 72.8018
+  webcamFOV_v: 57.88216
+  camFOV_v: 108
+  camFOV_h: 115.227486
+  camAspect: 1.145455
+  estimatedViewScaleX: 0
+  estimatedViewScaleY: 0
+  AutoApply: 0
   ViewScaleX: 0.5
-  ViewScaleY: 0.5
+  ViewScaleY: 0.467649
   ViewOffsetX: 0
-  ViewOffsetY: 0
+  ViewOffsetY: 0.012
   MRScaleX: 1
   MRScaleY: 1
   MROffsetX: 0
