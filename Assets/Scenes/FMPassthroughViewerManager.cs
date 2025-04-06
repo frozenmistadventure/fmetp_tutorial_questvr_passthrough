@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 using FMSolution.FMETP;
+using FMSolution.FMNetwork;
+using PassthroughCameraSamples;
 
 public class FMPassthroughCamera : MonoBehaviour
 {
@@ -9,6 +11,13 @@ public class FMPassthroughCamera : MonoBehaviour
 
     [Space]
     public UnityEvent<WebCamTexture> OnWebCamTextureReadyEvent = new UnityEvent<WebCamTexture>();
+
+    [Space]
+    [SerializeField] private FMNetworkManager fmnetwork;
+    private PassthroughCameraEye CameraEye => m_webCamTextureManager.Eye;
+    private Vector2Int CameraResolution => m_webCamTextureManager.RequestedResolution;
+    private float horizontalFoVDegrees = 0f;
+    private float verticalFoVDegrees = 0f;
 
     private void Start()
     {
@@ -25,6 +34,15 @@ public class FMPassthroughCamera : MonoBehaviour
 
         if (gameViewEncoder.WebcamTexture == null) gameViewEncoder.Action_SetWebcamTexture(m_webCamTextureManager.WebCamTexture);
         OnWebCamTextureReadyEvent.Invoke(m_webCamTextureManager.WebCamTexture);
+
+        //
+        Ray leftSidePointInCamera = PassthroughCameraUtils.ScreenPointToRayInCamera(CameraEye, new Vector2Int(0, CameraResolution.y / 2));
+        Ray rightSidePointInCamera = PassthroughCameraUtils.ScreenPointToRayInCamera(CameraEye, new Vector2Int(CameraResolution.x, CameraResolution.y / 2));
+        Ray topSidePointInCamera = PassthroughCameraUtils.ScreenPointToRayInCamera(CameraEye, new Vector2Int(CameraResolution.x / 2, CameraResolution.y));
+        Ray bottomSidePointInCamera = PassthroughCameraUtils.ScreenPointToRayInCamera(CameraEye, new Vector2Int(CameraResolution.x / 2, 0));
+        horizontalFoVDegrees = Vector3.Angle(leftSidePointInCamera.direction, rightSidePointInCamera.direction);
+        verticalFoVDegrees = Vector3.Angle(topSidePointInCamera.direction, bottomSidePointInCamera.direction);
+
     }
 
     public void Action_DecodeMessage(string inputString)
@@ -47,5 +65,9 @@ public class FMPassthroughCamera : MonoBehaviour
         if (float.TryParse(_data[6], out float _mscaleY)) gameViewEncoder.MixedRealityScaleY = _mscaleY;
         if (float.TryParse(_data[7], out float _moffsetX)) gameViewEncoder.MixedRealityOffsetX = _moffsetX;
         if (float.TryParse(_data[8], out float _moffsetY)) gameViewEncoder.MixedRealityOffsetY = _moffsetY;
+
+        //return back value
+        string _cameraInfo = $@"FMPassthroughCameraInfo,{horizontalFoVDegrees},{verticalFoVDegrees},{gameViewEncoder.MainCam.fieldOfView},{gameViewEncoder.MainCam.aspect}";
+        fmnetwork.SendToServer(_cameraInfo);
     }
 }
