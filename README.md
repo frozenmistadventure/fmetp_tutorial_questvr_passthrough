@@ -3,7 +3,8 @@
 https://github.com/frozenmistadventure/fmetp_tutorial_questvr_stream
 
 # fmetp_tutorial_questvr_passthrough
-This example project demonstrates the low latency passthrough live stream to any platforms, via **FMETP STREAM 6**.
+This example project demonstrates the low latency passthrough live stream (In-Game camera + webcam access) to any platforms, via **FMETP STREAM 6**.
+- supports: Android | iOS | Mac | PC | Linux | HoloLens 2 | Vision Pro | WebGL | StereoPi | and more
 - Youtube Tutorial:
 https://youtu.be/vJNRrGsxT-k
 
