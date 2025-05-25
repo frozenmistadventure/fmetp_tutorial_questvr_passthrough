@@ -16,8 +16,14 @@ https://youtu.be/vJNRrGsxT-k
 # Live Stream Meta Quest Mixed Reality to any devices
 For quick testing:
 - Download this template and import FMETP STREAM 6(v6.038 or above)
-- Build & Deploy the scene "QuestVR_PassthroughCameraStreamer(UDP)" to Quest3/3S
+- Build & Deploy the scene "QuestVR_PassthroughCameraStreamer(UDP)_HardwareAcceleration" or "QuestVR_PassthroughCameraStreamer(UDP)_Software" to Quest3/3S
 - The viewer scene is "QuestVR_PassthroughCameraReceiver(UDP)"
+
+Minor notes:
+- both hardware acceleration and software encode are both supported.
+- software(libvpx) is highly optimised with more control in quality, latency, cpu usage. In some cases, it could perform better than hardware acceleration if you assign more threads(cpu).
+- hardware acceleration(mediacodec ndk) should reduce cpu load in general, with minimal control in quality and latency.
+- The latest FMETP STREAM 6.060 or above supports real-time streaming codec VP8, VP9 and AV1.
 
 |   Low Latency   | Cross Platforms |   Build & Run   |
 |:---------------:|:---------------:|:---------------:|
