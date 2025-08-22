@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/QuestVR_PassthroughCameraStreamer(UDP).unity
+    path: Assets/Scenes/QuestVR_PassthroughCameraStreamer(UDP)_HardwareAcceleration.unity
     guid: 604e61d17cd9f47718bdf3042f18dec2
+  - enabled: 0
+    path: Assets/Scenes/QuestVR_PassthroughCameraStreamer(UDP)_Software.unity
+    guid: fb4112640f05b4a939a3f91341584bd5
   - enabled: 0
     path: Assets/Scenes/QuestVR_PassthroughCameraReceiver(UDP).unity
     guid: 505d65a9c860e4e718382dfd61d238da
