@@ -30,6 +30,18 @@ Minor notes:
 |:---------------:|:---------------:|:---------------:|
 | ![GIF 1](./Media/fmetp-stream-passthrough-test1.gif) | ![GIF 2](./Media/fmetp-stream-passthrough-test2.gif) | ![GIF 3](./Media/fmetp-stream-passthrough-test3.gif) |
 
+Troubleshootings (Gree Image, or White Image)
+- if the stream is White image, better check the FMNetworkManager connection status. 
+For FMNetwork example scene, sometimes Unity Editor will occupy the UDP socket ports. Thus, please don't running multiple Unity Editor with the same UDP ports.
+
+- if the stream is Green image in URP
+
+|   Auto Check URP/BIRP   | URP with "FMETP_URP" |
+|:---------------:|:---------------:|
+| ![Demo Screenshot](./Media/URPSettings1.png) | ![Demo Screenshot](./Media/URPSettings2.png) |
+
+
+
 # Reference
 This example project refer to official oculus samples. For further setup requirement, please refer to this repo
 - https://github.com/oculus-samples/Unity-PassthroughCameraApiSamples
