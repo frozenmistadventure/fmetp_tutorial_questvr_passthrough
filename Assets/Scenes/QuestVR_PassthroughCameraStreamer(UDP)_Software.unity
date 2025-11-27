@@ -1848,6 +1848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a9483c7a45cc456b85c2f3db18182e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowLog: 1
   EditorShowMode: 1
   EditorShowSettings: 1
   EditorShowNetworking: 1
@@ -1862,6 +1863,7 @@ MonoBehaviour:
   fullScreenResolution: {x: 1280, y: 720}
   MatchScreenAspect: 1
   AsyncMode: 1
+  TryHardwareAcceleration: 1
   CompressionMode: 0
   MotionEstimationLevel: 8
   MediaEncodingPass: 1
@@ -1895,10 +1897,10 @@ MonoBehaviour:
   ShowAdvancedViewSettings: 1
   ViewFlipX: 0
   ViewFlipY: 0
-  ViewScaleX: 0.5
-  ViewScaleY: 0.5
-  ViewOffsetX: 0
-  ViewOffsetY: 0
+  ViewScaleX: 0.3294823
+  ViewScaleY: 0.4619912
+  ViewOffsetX: -0.011
+  ViewOffsetY: -0.085
   CubemapResolution: 1024
   FMDesktopShowAdvancedOptions: 0
   FMDesktopRotation: 0
@@ -1906,6 +1908,9 @@ MonoBehaviour:
   FMDesktopFlipX: 0
   FMDesktopFlipY: 0
   FMDesktopShowCursor: 1
+  FMDesktopSupportHiDPI: 1
+  SupportNativeTexture: 1
+  FMDesktopAsyncCapture: 1
   FMDesktopRangeX: 1
   FMDesktopRangeY: 1
   FMDesktopOffsetX: 0
@@ -1914,7 +1919,8 @@ MonoBehaviour:
   FMDesktopTextureFormat: 4
   FMDesktopTargetDisplay: 0
   FMDesktopMonitorCount: 0
-  OutputFormat: 3
+  OutputFormat: 21
+  VPXVersion: 8
   OutputAsChunks: 1
   OnDataByteReadyEvent:
     m_PersistentCalls:
@@ -1938,6 +1944,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnRawRGB24ReadyEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRawVPXReadyEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRawAV1ReadyEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRawAVCReadyEvent:
     m_PersistentCalls:
       m_Calls: []
   label: 1001
