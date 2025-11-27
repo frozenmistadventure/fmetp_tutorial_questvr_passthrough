@@ -53,21 +53,39 @@ public class FMPassthroughCamera : MonoBehaviour
         }
     }
 
+    private FMPassthroughViewerCalibrationSettings calibrationSettings;
+    private FMPassthroughCameraInfo cameraInfo;
     private void FMPassthroughViewerCalibration(string inputString)
     {
-        string[] _data = inputString.Split(",");
-        if (float.TryParse(_data[1], out float _vscaleX)) gameViewEncoder.ViewScaleX = _vscaleX;
-        if (float.TryParse(_data[2], out float _vscaleY)) gameViewEncoder.ViewScaleY = _vscaleY;
-        if (float.TryParse(_data[3], out float _voffsetX)) gameViewEncoder.ViewOffsetX = _voffsetX;
-        if (float.TryParse(_data[4], out float _voffsetY)) gameViewEncoder.ViewOffsetY = _voffsetY;
+        string _json = inputString.Replace("FMPassthroughViewerCalibration", "");
+        calibrationSettings = JsonUtility.FromJson<FMPassthroughViewerCalibrationSettings>(_json);
+        gameViewEncoder.ViewScaleX = calibrationSettings.ViewScaleX;
+        gameViewEncoder.ViewScaleY = calibrationSettings.ViewScaleY;
+        gameViewEncoder.ViewOffsetX = calibrationSettings.ViewOffsetX;
+        gameViewEncoder.ViewOffsetY = calibrationSettings.ViewOffsetY;
 
-        if (float.TryParse(_data[5], out float _mscaleX)) gameViewEncoder.MixedRealityScaleX = _mscaleX;
-        if (float.TryParse(_data[6], out float _mscaleY)) gameViewEncoder.MixedRealityScaleY = _mscaleY;
-        if (float.TryParse(_data[7], out float _moffsetX)) gameViewEncoder.MixedRealityOffsetX = _moffsetX;
-        if (float.TryParse(_data[8], out float _moffsetY)) gameViewEncoder.MixedRealityOffsetY = _moffsetY;
+        gameViewEncoder.MixedRealityScaleX = calibrationSettings.MRScaleX;
+        gameViewEncoder.MixedRealityScaleY = calibrationSettings.MRScaleY;
+        gameViewEncoder.MixedRealityOffsetX = calibrationSettings.MROffsetX;
+        gameViewEncoder.MixedRealityOffsetY = calibrationSettings.MROffsetY;
 
         //return back value
-        string _cameraInfo = $@"FMPassthroughCameraInfo,{horizontalFoVDegrees},{verticalFoVDegrees},{gameViewEncoder.MainCam.fieldOfView},{gameViewEncoder.MainCam.aspect}";
-        fmnetwork.SendToServer(_cameraInfo);
+        if (cameraInfo == null) cameraInfo = new FMPassthroughCameraInfo();
+        cameraInfo.WebcamFOV_h = horizontalFoVDegrees;
+        cameraInfo.WebcamFOV_v = verticalFoVDegrees;
+        cameraInfo.CamFOV_v = gameViewEncoder.MainCam.fieldOfView;
+        cameraInfo.CamAspect = gameViewEncoder.MainCam.aspect;
+
+        {
+            float verticalFOVRad = cameraInfo.CamFOV_v * Mathf.PI / 180.0f;
+            float tanHalfVFOV = Mathf.Tan(verticalFOVRad / 2.0f);
+
+            float tanHalfHFOV = tanHalfVFOV * cameraInfo.CamAspect;
+            float horizontalFOVRad = 2.0f * Mathf.Atan(tanHalfHFOV);
+            cameraInfo.CamFOV_h = horizontalFOVRad * 180.0f / Mathf.PI;
+        }
+
+        string _cameraInfoJson = JsonUtility.ToJson(cameraInfo, false);
+        fmnetwork.SendToServer(_cameraInfoJson);
     }
 }

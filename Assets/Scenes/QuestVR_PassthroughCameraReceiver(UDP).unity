@@ -148,12 +148,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8112ebf7007407ba81465ecae68e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowLog: 1
   EditorShowSettings: 1
   EditorShowDecoded: 1
   EditorShowDesktopFrameInfo: 0
   EditorShowPairing: 1
   EditorShowPreview: 0
   AsyncMode: 1
+  TryHardwareAcceleration: 0
   DecoderDelay: 0
   ColorReductionLevel: 0
   PreviewType: 1
@@ -170,8 +172,11 @@ MonoBehaviour:
   Mono: 0
   Sharpen: 0
   DeNoise: 0
+  Dither: 0.007843138
+  DitherTimeScale: 1
   label: 1001
   GZipMode: 1
+  VPXVersion: 8
   MediaThreadCount: 1
 --- !u!4 &281634391
 Transform:
@@ -745,22 +750,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmnetwork: {fileID: 334881048}
-  webcamFOV_h: 72.8018
-  webcamFOV_v: 57.88216
-  camFOV_v: 100.2439
-  camFOV_h: 131.84177
-  camAspect: 1.869565
+  cameraInfo:
+    WebcamFOV_h: 72.8018
+    WebcamFOV_v: 57.88216
+    CamFOV_v: 100.2439
+    CamFOV_h: 131.8418
+    CamAspect: 1.869565
   estimatedViewScaleX: 0.3294823
   estimatedViewScaleY: 0.46199116
   AutoApply: 1
-  ViewScaleX: 0.3294823
-  ViewScaleY: 0.46199116
-  ViewOffsetX: -0.011
-  ViewOffsetY: -0.085
-  MRScaleX: 1
-  MRScaleY: 1
-  MROffsetX: 0
-  MROffsetY: 0
+  calibrationSettings:
+    ViewScaleX: 0.3294823
+    ViewScaleY: 0.4619912
+    ViewOffsetX: -0.011
+    ViewOffsetY: -0.085
+    MRScaleX: 1
+    MRScaleY: 1
+    MROffsetX: 0
+    MROffsetY: 0
   RemoteSyncData: 1
   syncFPS: 8
 --- !u!4 &1454070194
@@ -910,22 +917,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmnetwork: {fileID: 334881048}
-  webcamFOV_h: 0
-  webcamFOV_v: 0
-  camFOV_v: 0
-  camFOV_h: 0
-  camAspect: 0
+  cameraInfo:
+    WebcamFOV_h: 0
+    WebcamFOV_v: 0
+    CamFOV_v: 0
+    CamFOV_h: 0
+    CamAspect: 0
   estimatedViewScaleX: 0
   estimatedViewScaleY: 0
   AutoApply: 0
-  ViewScaleX: 0.5
-  ViewScaleY: 0.5
-  ViewOffsetX: 0
-  ViewOffsetY: 0
-  MRScaleX: 1
-  MRScaleY: 1
-  MROffsetX: 0
-  MROffsetY: 0
+  calibrationSettings:
+    ViewScaleX: 1
+    ViewScaleY: 1
+    ViewOffsetX: 0
+    ViewOffsetY: 0
+    MRScaleX: 1
+    MRScaleY: 1
+    MROffsetX: 0
+    MROffsetY: 0
   RemoteSyncData: 1
   syncFPS: 8
 --- !u!4 &2091721730
