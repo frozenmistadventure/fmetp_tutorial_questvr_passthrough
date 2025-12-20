@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 281634391}
   - component: {fileID: 281634390}
   m_Layer: 0
-  m_Name: GameViewDecoder
+  m_Name: GameViewDecoder_ID1001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -616,73 +616,6 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
---- !u!1 &1421274674
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1421274676}
-  - component: {fileID: 1421274675}
-  m_Layer: 0
-  m_Name: FMPassthroughViewerCalibration(DummyURP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1421274675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421274674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39b528a96f9444f3a847f3c24c847c87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fmnetwork: {fileID: 334881048}
-  cameraInfo:
-    WebcamFOV_h: 72.80092
-    WebcamFOV_v: 57.88137
-    CamFOV_v: 100.2439
-    CamFOV_h: 131.8418
-    CamAspect: 1.869565
-  estimatedViewScaleX: 0.3294769
-  estimatedViewScaleY: 0.4619835
-  additionalViewScaleX: -0.01869565
-  additionalViewScaleY: -0.01
-  AutoApply: 1
-  calibrationSettings:
-    ViewScaleX: 0.3107812
-    ViewScaleY: 0.4519835
-    ViewOffsetX: -0.0125
-    ViewOffsetY: -0.085
-    MRScaleX: 1
-    MRScaleY: 1
-    MROffsetX: 0
-    MROffsetY: 0
-  RemoteSyncData: 1
-  syncFPS: 8
---- !u!4 &1421274676
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421274674}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1449027352
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +628,7 @@ GameObject:
   - component: {fileID: 1449027355}
   - component: {fileID: 1449027354}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: RawImage_Stereo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -710,7 +643,7 @@ RectTransform:
   m_GameObject: {fileID: 1449027352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1653582041}
@@ -718,7 +651,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1280, y: 960}
+  m_SizeDelta: {x: 1920, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1449027354
 MonoBehaviour:
@@ -873,7 +806,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 960}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -934,5 +867,4 @@ SceneRoots:
   - {fileID: 281634391}
   - {fileID: 1653582041}
   - {fileID: 768341240}
-  - {fileID: 1421274676}
   - {fileID: 1454070194}

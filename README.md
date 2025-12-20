@@ -8,7 +8,7 @@ This example project demonstrates the low latency passthrough live stream (In-Ga
 - Youtube Tutorial:
 https://youtu.be/vJNRrGsxT-k
 
-- Tested with Unity 2022.3.58f1 and 6000.0.39f1
+- Tested with Unity 2022.3.58f1 and 6000.0.61f1
 - Asset Store link: https://assetstore.unity.com/packages/slug/307623
 - Support: thelghome@gmail.com
 
@@ -16,7 +16,7 @@ https://youtu.be/vJNRrGsxT-k
 
 # Live Stream Meta Quest Mixed Reality to any devices
 For quick testing:
-- Download this template and import FMETP STREAM 6(v6.038 or above)
+- Download this template and import FMETP STREAM 6(v6.120 or above)
 - Build & Deploy the scene "QuestVR_PassthroughCameraStreamer(UDP)_HardwareAcceleration" or "QuestVR_PassthroughCameraStreamer(UDP)_Software" to Quest3/3S
 - The viewer scene is "QuestVR_PassthroughCameraReceiver(UDP)"
 
@@ -31,7 +31,7 @@ Minor notes:
 | ![GIF 1](./Media/fmetp-stream-passthrough-test1.gif) | ![GIF 2](./Media/fmetp-stream-passthrough-test2.gif) | ![GIF 3](./Media/fmetp-stream-passthrough-test3.gif) |
 
 Troubleshootings (Gree Image, or White Image)
-- if the stream is White image, better check the FMNetworkManager connection status. 
+- if the stream is White image, better check the FMNetworkManager connection status.
 For FMNetwork example scene, sometimes Unity Editor will occupy the UDP socket ports. Thus, please don't running multiple Unity Editor with the same UDP ports.
 
 - if the stream is Green image in URP

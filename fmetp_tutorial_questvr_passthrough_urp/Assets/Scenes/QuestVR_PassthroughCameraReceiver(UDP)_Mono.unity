@@ -322,73 +322,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &582413186
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 582413188}
-  - component: {fileID: 582413187}
-  m_Layer: 0
-  m_Name: FMPassthroughViewerCalibration(DummyBIRP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &582413187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582413186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39b528a96f9444f3a847f3c24c847c87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fmnetwork: {fileID: 334881048}
-  cameraInfo:
-    WebcamFOV_h: 72.80092
-    WebcamFOV_v: 57.88137
-    CamFOV_v: 110
-    CamFOV_h: 107.4761
-    CamAspect: 0.9545454
-  estimatedViewScaleX: 0.5408297
-  estimatedViewScaleY: 0.3871843
-  additionalViewScaleX: 0.1
-  additionalViewScaleY: 0.1
-  AutoApply: 1
-  calibrationSettings:
-    ViewScaleX: 0.6408297
-    ViewScaleY: 0.4871843
-    ViewOffsetX: 0.122
-    ViewOffsetY: 0.02
-    MRScaleX: 1
-    MRScaleY: 1
-    MROffsetX: 0
-    MROffsetY: 0
-  RemoteSyncData: 1
-  syncFPS: 8
---- !u!4 &582413188
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582413186}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &703758688
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,23 +760,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b528a96f9444f3a847f3c24c847c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fmnetwork: {fileID: 334881048}
+  fmnetwork: {fileID: 0}
   cameraInfo:
     WebcamFOV_h: 72.80092
     WebcamFOV_v: 57.88137
-    CamFOV_v: 100.24391
-    CamFOV_h: 131.84178
+    CamFOV_v: 90
+    CamFOV_h: 123.7168
     CamAspect: 1.8695652
-  estimatedViewScaleX: 0.3294769
-  estimatedViewScaleY: 0.4619835
-  additionalViewScaleX: -0.01869565
-  additionalViewScaleY: -0.01
+  estimatedViewScaleX: 0.3943569
+  estimatedViewScaleY: 0.5529565
+  additionalViewScaleX: 0.12
+  additionalViewScaleY: -0.04
   AutoApply: 1
   calibrationSettings:
-    ViewScaleX: 0.31078124
-    ViewScaleY: 0.4519835
-    ViewOffsetX: -0.0125
-    ViewOffsetY: -0.085
+    ViewScaleX: 0.5143569
+    ViewScaleY: 0.5129565
+    ViewOffsetX: 0
+    ViewOffsetY: -0.1
     MRScaleX: 1
     MRScaleY: 1
     MROffsetX: 0
@@ -978,4 +911,3 @@ SceneRoots:
   - {fileID: 1653582041}
   - {fileID: 768341240}
   - {fileID: 1454070194}
-  - {fileID: 582413188}
